@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "51756051-59ee-47a6-9559-f4f818332195",
+		"name": "examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6291872"
+	},
+	"item": [
+		{
+			"name": "sign-in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer {{token}}"
+					},
+					{
+						"key": "Channel",
+						"type": "text",
+						"value": "{{channel}}"
+					},
+					{
+						"key": "Application-Id",
+						"type": "text",
+						"value": "{{application-id}}"
+					},
+					{
+						"key": "Reference-Service",
+						"type": "text",
+						"value": "{{reference-service}}"
+					},
+					{
+						"key": "Reference-Operation",
+						"type": "text",
+						"value": "{{reference-operation}}"
+					},
+					{
+						"key": "X-IBM-Client-Id",
+						"type": "text",
+						"value": "{{client-id-salesforce}}"
+					},
+					{
+						"key": "origin-addr",
+						"type": "text",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"name1\",\n\t\"email\": \"email1@gmail.com\",\n\t\"password\": \"Q1ssword3\",\n\t\"phones\": [\n\t\t{\n\t\t\t\"number\": 3,\n\t\t\t\"citycode\": 3,\n\t\t\t\"contrycode\": \"contrycode\"\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImVtYWlsMUBnbWFpbC5jb20iLCJleHAiOjE3MTIzNTk3MjJ9.xXPl4u1gGbSw0rBoqFDdOfI8C1wmzBl8Xr9w4YB_z58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"evaluarsolicitudrequestbody\":  {\n        \"xmlSolicitud\":\"10119698\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
